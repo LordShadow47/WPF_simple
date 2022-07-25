@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calculator
 {
@@ -23,6 +11,94 @@ namespace Calculator
         public MainWindow()
         {
             InitializeComponent();
+
+            Result.Text = string.Empty;
+            Operation.Text = string.Empty; 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Result.Text = string.Empty;
+
+            var button = sender as Button;
+            var currentNumber = button.Name[button.Name.Length - 1];
+
+            Operation.Text += currentNumber;
+        }
+        private void Button_Add(object sender, RoutedEventArgs e)
+        {
+            var operation = Operation.Text;
+
+            if(ContainOperation(operation))
+            {
+                Operation.Text = Calculate(operation).ToString();
+            }
+            Operation.Text += "+";
+        }
+        private void Button_Sub(object sender, RoutedEventArgs e)
+        {
+            var operation = Operation.Text;
+
+            if (ContainOperation(operation))
+            {
+                Operation.Text = Calculate(operation).ToString();
+            }
+            Operation.Text += "-";
+        }
+        private void Button_Mul(object sender, RoutedEventArgs e)
+        {
+            var operation = Operation.Text;
+
+            if (ContainOperation(operation))
+            {
+                Operation.Text = Calculate(operation).ToString();
+            }
+            Operation.Text += "*";
+        }
+        private void Button_Div(object sender, RoutedEventArgs e)
+        {
+            var operation = Operation.Text;
+
+            if (ContainOperation(operation))
+            {
+                Operation.Text = Calculate(operation).ToString();
+            }
+            Operation.Text += "/";
+        }
+        private void Button_Eql(object sender, RoutedEventArgs e)
+        {
+            var operation = Operation.Text;
+
+            Result.Text = Calculate(operation).ToString();
+
+            Operation.Text = string.Empty;
+        }
+        private int Calculate (string operation)
+        {
+            if (operation.Contains("+"))
+            {
+                var elements = operation.Split('+');
+                return int.Parse(elements[0]) + int.Parse(elements[1]);
+            }
+            if (operation.Contains("-"))
+            {
+                var elements = operation.Split('-');
+                return int.Parse(elements[0]) - int.Parse(elements[1]);
+            }
+            if (operation.Contains("*"))
+            {
+                var elements = operation.Split('*');
+                return int.Parse(elements[0]) * int.Parse(elements[1]);
+            }
+            if (operation.Contains("/"))
+            {
+                var elements = operation.Split('/');
+                return int.Parse(elements[0]) / int.Parse(elements[1]);
+            }
+            return default;
+        }
+        private bool ContainOperation(string operation) 
+                => operation.Contains("+") || operation.Contains("-") || operation.Contains("*") || operation.Contains("/");           
+        
     }
 }
