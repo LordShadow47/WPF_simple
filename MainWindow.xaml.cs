@@ -15,7 +15,7 @@ namespace Calculator
             Result.Text = string.Empty;
             Operation.Text = string.Empty; 
         }
-
+        //Button clicks
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Result.Text = string.Empty;

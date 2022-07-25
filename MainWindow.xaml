@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="MainWindow" Height="600" Width="600">
+        Title="MainWindow" Height="300" Width="600">
     <StackPanel>
         <TextBlock x:Name="Result" FontSize="32" />
         <TextBlock x:Name="Operation" FontSize="28" />
@@ -24,22 +24,22 @@
 
             <Button x:Name="Button1" Click="Button_Click" Grid.Row='0' Grid.Column='0' Content="1" FontSize="20" Margin="10" />
             <Button x:Name="Button2" Click="Button_Click" Grid.Row='0' Grid.Column='1' Content="2" FontSize="20" Margin="10"/>
-            <Button x:Name="Button3" Click="Button_Click" Grid.Row='0' Grid.Column='2' Content="3" FontSize="20" />
-            <Button x:Name="Button4" Click="Button_Click" Grid.Row='1' Grid.Column='0' Content="4" FontSize="20" />
-            <Button x:Name="Button5" Click="Button_Click" Grid.Row='1' Grid.Column='1' Content="5" FontSize="20" />
-            <Button x:Name="Button6" Click="Button_Click" Grid.Row='1' Grid.Column='2' Content="6" FontSize="20" />
-            <Button x:Name="Button7" Click="Button_Click" Grid.Row='2' Grid.Column='0' Content="7" FontSize="20" />
-            <Button x:Name="Button8" Click="Button_Click" Grid.Row='2' Grid.Column='1' Content="8" FontSize="20" />
-            <Button x:Name="Button9" Click="Button_Click" Grid.Row='2' Grid.Column='2' Content="9" FontSize="20" />
+            <Button x:Name="Button3" Click="Button_Click" Grid.Row='0' Grid.Column='2' Content="3" FontSize="20" Margin="10"/>
+            <Button x:Name="Button4" Click="Button_Click" Grid.Row='1' Grid.Column='0' Content="4" FontSize="20" Margin="10"/>
+            <Button x:Name="Button5" Click="Button_Click" Grid.Row='1' Grid.Column='1' Content="5" FontSize="20" Margin="10"/>
+            <Button x:Name="Button6" Click="Button_Click" Grid.Row='1' Grid.Column='2' Content="6" FontSize="20" Margin="10"/>
+            <Button x:Name="Button7" Click="Button_Click" Grid.Row='2' Grid.Column='0' Content="7" FontSize="20" Margin="10"/>
+            <Button x:Name="Button8" Click="Button_Click" Grid.Row='2' Grid.Column='1' Content="8" FontSize="20" Margin="10"/>
+            <Button x:Name="Button9" Click="Button_Click" Grid.Row='2' Grid.Column='2' Content="9" FontSize="20" Margin="10"/>
 
         </Grid>
         <StackPanel Orientation="Horizontal">
-            <Button x:Name="Button0" Click="Button_Click" Content="0" Width="100" FontSize="20"/>
-            <Button x:Name="ButtonAdd" Click="Button_Add" Content="+" Width="100" FontSize="20"/>
-            <Button x:Name="ButtonSub" Click="Button_Sub" Content="-" Width="100" FontSize="20"/>
-            <Button x:Name="ButtonMul" Click="Button_Mul" Content="*" Width="100" FontSize="20"/>
-            <Button x:Name="ButtonDiv" Click="Button_Div" Content="/" Width="100" FontSize="20"/>
-            <Button x:Name="ButtonEql" Click="Button_Eql" Content="=" Width="100" FontSize="20"/>
+            <Button x:Name="Button0" Click="Button_Click" Content="0" Width="100" FontSize="20" Margin="10"/>
+            <Button x:Name="ButtonAdd" Click="Button_Add" Content="+" Width="100" FontSize="20" Margin="10"/>
+            <Button x:Name="ButtonSub" Click="Button_Sub" Content="-" Width="100" FontSize="20" Margin="10"/>
+            <Button x:Name="ButtonMul" Click="Button_Mul" Content="*" Width="100" FontSize="20" Margin="10"/>
+            <Button x:Name="ButtonDiv" Click="Button_Div" Content="/" Width="100" FontSize="20" Margin="10"/>
+            <Button x:Name="ButtonEql" Click="Button_Eql" Content="=" Width="100" FontSize="20" Margin="10"/>
         </StackPanel>
     </StackPanel>
 </Window>
